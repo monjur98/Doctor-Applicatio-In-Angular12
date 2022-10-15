@@ -1,0 +1,149 @@
+.chief-complaints-tab {
+    h2 {
+        text-align: center;
+        color: #441f0f;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    h4 {
+        color: #f4952a;
+        font-size: 16px;
+        font-weight: normal;
+    }
+    .complaint-cat {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 10px 10px 0;
+        }
+    }
+}
+.fixed-question-tab {
+    h2 {
+        text-align: center;
+        color: #441f0f;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    h4 {
+        color: #f4952a;
+        font-size: 16px;
+        font-weight: normal;
+    }
+    .row {
+        .col-md-4 {
+            margin-bottom: 10px;
+        }
+    }
+    .define-area {
+        p {
+            font-size: 16px;
+        }
+        button {
+            min-width: 100px;
+            padding: 0.3rem 1rem;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
+.pre-check-tab {
+    h2 {
+        text-align: center;
+        color: #441f0f;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    .pre-check-box {
+        display: block;
+        margin-bottom: 30px;
+        text-align: center;
+        img {
+            width: 50%;
+        }
+        p {
+            margin-top: 15px;
+        }
+    }
+}
+.vitals-tab {
+    h2 {
+        text-align: center;
+        color: #441f0f;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    .row {
+        .col-md-4 {
+            margin-bottom: 10px;
+        }
+    }
+    .define-area {
+        p {
+            font-size: 16px;
+        }
+        button {
+            min-width: 100px;
+            padding: 0.3rem 1rem;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
+.general-exams-tab {
+    h1 {
+        text-align: center;
+        font-size: 24px;
+    }
+    h2 {
+        text-align: center;
+        color: #441f0f;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    h4 {
+        color: #f4952a;
+        font-size: 16px;
+        font-weight: normal;
+    }
+    .examination-img {
+        margin-bottom: 15px;
+        img {
+            width: 100%;
+            height: 100%;
+            border: 2px solid #689f38;
+            height: auto;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    }
+    .examination-text {
+        p {
+            color: #441f0f;
+        }
+    }
+    .examination-q {
+        p {
+            color: #f49932;
+            font-size: 16px;
+        }
+        button {
+            min-width: 100px;
+            padding: 0.3rem 1rem;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    .fake-link {
+        cursor: pointer;
+    }
+
+    .fake-link:hover #Rectangle,
+    .fake-link:hover #Rectangle-Copy,
+    .fake-link:hover #Rectangle-Copy-2 {
+        transition: all 0.4s ease-in-out;
+        fill: rgb(1, 131, 18) !important;
+    }
+}

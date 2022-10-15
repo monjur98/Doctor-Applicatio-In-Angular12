@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="login-sec">
+                <div class="login-box">
+                    <div class="login-logo">
+                        <img src="assets/img/uday-logo.png" alt="Uday">
+                        <h2>Welcome to UDAY.</h2>
+                    </div>
+                    <div class="mb-2">
+                        <p class="lable">User Name</p>
+                        <input type="text" pInputText class="p-inputtext-sm" [(ngModel)]="person.emailId" />
+                    </div>
+                    <div class="mb-3">
+                        <p class="lable">Password</p>
+                        <input type="password" pInputText class="p-inputtext-sm" [(ngModel)]="person.password" />
+                    </div>
+                    <div class="text-center">
+                        <a href="javascript:void(0)" class="btn btn-success" type="button" (click)="login()"><i
+                                class="pi pi-lock-open"></i> Login</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="login-img">
+                <img src="assets/img/udai-login-img.svg" alt="">
+            </div>
+        </div>
+    </div>
+</div>

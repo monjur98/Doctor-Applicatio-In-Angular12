@@ -1,0 +1,213 @@
+<app-header></app-header>
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title">
+                    <h2>New Service</h2>
+                </div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><i class="pi pi-th-large"></i> Dashboard </a></li>
+                        <li class="breadcrumb-item active" aria-current="page">New Service</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- |\/| -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p-tabView>
+                    <p-tabPanel header="New Service" [selected]="true">
+                        <div class="new-service-tab">
+                            <h2>Please describe details relating to the service Performed.</h2>
+                            <p-divider align="left">
+                                <div class="inline-flex align-items-center">
+                                    <h4 class="m-0"><i class="pi pi-cog pi-spin"></i> Services</h4>
+                                </div>
+                            </p-divider>
+                            <!-- |\/| -->
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <p class="lable">Service</p>
+                                    <p-toggleButton [(ngModel)]="bloodSugarFasting"
+                                        onLabel="Blood Sugar-Fasting" offLabel="Blood Sugar-Fasting"
+                                        onIcon="pi pi-check-circle" offIcon="pi pi-circle">
+                                    </p-toggleButton>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="lable">Result</p>
+                                    <input type="text" pInputText placeholder="Describe the Results" />
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="lable">Additional Info</p>
+                                    <input type="text" pInputText />
+                                </div>
+                            </div>
+                            <!-- |\/| -->
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <p class="lable">Service</p>
+                                    <p-toggleButton [(ngModel)]="bloodSugar"
+                                        onLabel="Blood Sugar" offLabel="Blood Sugar"
+                                        onIcon="pi pi-check-circle" offIcon="pi pi-circle">
+                                    </p-toggleButton>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="lable">Result</p>
+                                    <input type="text" pInputText placeholder="Describe the Results" />
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="lable">Additional Info</p>
+                                    <input type="text" pInputText />
+                                </div>
+                            </div>
+                            <!-- |\/| -->
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <p class="lable">Service</p>
+                                    <p-toggleButton [(ngModel)]="bloodSugarPP"
+                                        onLabel="Blood Sugar-PP" offLabel="Blood Sugar-PP"
+                                        onIcon="pi pi-check-circle" offIcon="pi pi-circle">
+                                    </p-toggleButton>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="lable">Result</p>
+                                    <input type="text" pInputText placeholder="Describe the Results" />
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="lable">Additional Info</p>
+                                    <input type="text" pInputText />
+                                </div>
+                            </div>
+                            <!-- |\/| -->
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <p class="lable">Service</p>
+                                    <p-toggleButton [(ngModel)]="covidRAT"
+                                        onLabel="Covid-RAT" offLabel="Covid-RAT"
+                                        onIcon="pi pi-check-circle" offIcon="pi pi-circle">
+                                    </p-toggleButton>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="lable">Result</p>
+                                    <input type="text" pInputText placeholder="Describe the Results" />
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="lable">Additional Info</p>
+                                    <input type="text" pInputText />
+                                </div>
+                            </div>
+                            <!-- |\/| -->
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <p class="lable">Service</p>
+                                    <p-toggleButton [(ngModel)]="ecG"
+                                        onLabel="ECG" offLabel="ECG"
+                                        onIcon="pi pi-check-circle" offIcon="pi pi-circle">
+                                    </p-toggleButton>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="lable">Result</p>
+                                    <input type="text" pInputText placeholder="Describe the Results" />
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="lable">Additional Info</p>
+                                    <input type="text" pInputText />
+                                </div>
+                            </div>
+                            <!-- |\/| -->
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <p class="lable">Service</p>
+                                    <p-toggleButton [(ngModel)]="haemoglobin"
+                                        onLabel="Haemoglobin" offLabel="Haemoglobin"
+                                        onIcon="pi pi-check-circle" offIcon="pi pi-circle">
+                                    </p-toggleButton>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="lable">Result</p>
+                                    <input type="text" pInputText placeholder="Describe the Results" />
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="lable">Additional Info</p>
+                                    <input type="text" pInputText />
+                                </div>
+                            </div>
+                            <!-- |\/| -->
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <p class="lable">Service</p>
+                                    <p-toggleButton [(ngModel)]="bloodPressure"
+                                        onLabel="Blood Pressure" offLabel="Blood Pressure"
+                                        onIcon="pi pi-check-circle" offIcon="pi pi-circle">
+                                    </p-toggleButton>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="lable">Result</p>
+                                    <input type="text" pInputText placeholder="Describe the Results" />
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="lable">Additional Info</p>
+                                    <input type="text" pInputText />
+                                </div>
+                            </div>
+                            <!-- |\/| -->
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <p class="lable">Service</p>
+                                    <p-toggleButton [(ngModel)]="oxygenInBlood"
+                                        onLabel="Oxygen in Blood" offLabel="Oxygen in Blood"
+                                        onIcon="pi pi-check-circle" offIcon="pi pi-circle">
+                                    </p-toggleButton>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="lable">Result</p>
+                                    <input type="text" pInputText placeholder="Describe the Results" />
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="lable">Additional Info</p>
+                                    <input type="text" pInputText />
+                                </div>
+                            </div>
+                            <!-- |\/| -->
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <p class="lable">Service</p>
+                                    <p-toggleButton [(ngModel)]="physiotherapy"
+                                        onLabel="Physiotherapy" offLabel="Physiotherapy"
+                                        onIcon="pi pi-check-circle" offIcon="pi pi-circle">
+                                    </p-toggleButton>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="lable">Result</p>
+                                    <input type="text" pInputText placeholder="Describe the Results" />
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="lable">Additional Info</p>
+                                    <input type="text" pInputText />
+                                </div>
+                            </div>
+                            <!-- |\/| -->
+                            <div class="row justify-content-center mt-4">
+                                <div class="col-12 col-md-4">
+                                    <button pButton pRipple type="button" label="SAVE"
+                                        class="p-button-rounded p-button-success w-100" icon="pi pi-check"
+                                        iconPos="right"></button>
+                                </div>
+                            </div>
+                            <!-- |\/| -->
+                        </div>
+                    </p-tabPanel>
+                    <p-tabPanel header="Report">
+
+                    </p-tabPanel>
+                </p-tabView>
+            </div>
+        </div>
+    </div>
+</section>

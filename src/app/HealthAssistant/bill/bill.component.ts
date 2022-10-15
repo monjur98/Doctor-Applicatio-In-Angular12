@@ -1,0 +1,25 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-bill',
+  templateUrl: './bill.component.html',
+  styleUrls: ['./bill.component.scss']
+})
+export class BillComponent implements OnInit {
+
+  bloodSugarFasting = false;
+  bloodSugar = false;
+  bloodSugarPP = false;
+  covidRAT = false;
+  ecG = false;
+  haemoglobin = false;
+  bloodPressure = false;
+  oxygenInBlood = false;
+  physiotherapy = false;
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}

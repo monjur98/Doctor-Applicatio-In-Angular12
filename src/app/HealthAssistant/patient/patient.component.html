@@ -1,0 +1,325 @@
+<app-header></app-header>
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title">
+                    <h2>Health Assistant</h2>
+                </div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page"><i class="pi pi-th-large"></i> Dashboard
+                        </li>
+                        <li class="breadcrumb-item" aria-current="page">Register New Patient</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p-tabView>
+                    <p-tabPanel header="Patient Demographics" [selected]="true">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 mb-2">
+                                <div class="file-input">
+                                    <img *ngIf="imageUrl" [src]="imageUrl" class="uplodad-image">
+                                    <div *ngIf="!imageUrl">
+                                        <input #Image type="file" (change)="profileFileInput($any($event.target).files)"
+                                            id="file-input" class="upload-file-input" />
+                                        <label class="upload-file-label" for="file-input">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                data-icon="upload" class="svg-inline--fa fa-upload fa-w-16" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z">
+                                                </path>
+                                            </svg>
+                                            <span>Upload Profile Image</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p-divider align="left">
+                            <div class="inline-flex align-items-center">
+                                <h4 class="divider m-0"><i class="pi pi-check"></i> Demographic Information</h4>
+                            </div>
+                        </p-divider>
+                        <div class="row">
+                            <!-- |\/| -->
+                            <div class="col-md-4 mb-2">
+                                <p class="lable">Name<span>*</span></p>
+                                <input type="text" pInputText />
+                            </div>
+                            <div class="col-md-4">
+                                <p class="lable">Age<span>*</span></p>
+                                <div class="row">
+                                    <div class="col-7 mb-2">
+                                        <input type="tel" pInputText />
+                                    </div>
+                                    <div class="col-md-5 mb-2">
+                                        <p-dropdown [options]="ageType" placeholder="Select" optionLabel="name"
+                                            optionValue="code" [showClear]="true">
+                                        </p-dropdown>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <p class="lable">Gender<span>*</span></p>
+                                <p-dropdown [options]="gender" placeholder="Select" optionLabel="name"
+                                    optionValue="code" [showClear]="true">
+                                </p-dropdown>
+                            </div>
+                            <!-- |\/| -->
+                            <div class="col-md-4 mb-2">
+                                <p class="lable">Occupation<span>*</span></p>
+                                <p-dropdown [options]="occupation" placeholder="Select" optionLabel="name"
+                                    optionValue="code" [showClear]="true">
+                                </p-dropdown>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <p class="lable">Phone Number<span>*</span></p>
+                                <input type="tel" pInputText />
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <p class="lable">Husband / Wife / Son / Daughter of<span>*</span></p>
+                                <input type="text" pInputText />
+                            </div>
+                            <!-- |\/| -->
+                            <div class="col-md-6 mb-2">
+                                <p class="lable">Address 1<span>*</span></p>
+                                <textarea pInputTextarea></textarea>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <p class="lable">Address 2</p>
+                                <textarea pInputTextarea></textarea>
+                            </div>
+                            <!-- |\/| -->
+                            <div class="col-md-3 mb-2">
+                                <p class="lable">State<span>*</span></p>
+                                <p-dropdown [options]="state" placeholder="Select" optionLabel="name" optionValue="code"
+                                    [showClear]="true">
+                                </p-dropdown>
+                            </div>
+                            <div class="col-md-3 mb-2">
+                                <p class="lable">District<span>*</span></p>
+                                <p-dropdown [options]="district" placeholder="Select" optionLabel="name"
+                                    optionValue="code" [showClear]="true">
+                                </p-dropdown>
+                            </div>
+                            <div class="col-md-3 mb-2">
+                                <p class="lable">Police Station<span>*</span></p>
+                                <p-dropdown [options]="policeStation" placeholder="Select" optionLabel="name"
+                                    optionValue="code" [showClear]="true">
+                                </p-dropdown>
+                            </div>
+                            <div class="col-md-3 mb-2">
+                                <p class="lable">Country</p>
+                                <input type="text" pInputText value="INDIA" readonly />
+                            </div>
+                            <!-- |\/| -->
+                        </div>
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-12 col-md-4">
+                                <button pButton pRipple type="button" label="Go to Next Section"
+                                    class="p-button-rounded w-100" icon="pi pi-arrow-right" iconPos="right"></button>
+                            </div>
+                        </div>
+                        <!-- |\/| -->
+                    </p-tabPanel>
+                    <p-tabPanel header="Patient Medical History">
+                        <p-divider align="left">
+                            <div class="inline-flex align-items-center">
+                                <h4 class="divider m-0"><i class="pi pi-check"></i> Health Diagnosis</h4>
+                            </div>
+                        </p-divider>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6">
+                                <div class="field-checkbox mb-3">
+                                    <p-checkbox name="pmHistory" value="High Blood Pressure" inputId="hbp">
+                                    </p-checkbox>
+                                    <label for="hbp">High Blood Pressure</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="field-checkbox mb-3">
+                                    <p-checkbox name="pmHistory" value="Stroke" inputId="str">
+                                    </p-checkbox>
+                                    <label for="str">Stroke</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="field-checkbox mb-3">
+                                    <p-checkbox name="pmHistory" value="Asthma" inputId="ast">
+                                    </p-checkbox>
+                                    <label for="ast">Asthma</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="field-checkbox mb-3">
+                                    <p-checkbox name="pmHistory" value="Cancer" inputId="can">
+                                    </p-checkbox>
+                                    <label for="can">Cancer</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="field-checkbox mb-3">
+                                    <p-checkbox name="pmHistory" value="Heart Attack" inputId="hea">
+                                    </p-checkbox>
+                                    <label for="hea">Heart Attack</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="field-checkbox mb-3">
+                                    <p-checkbox name="pmHistory" value="Diabetes" inputId="dia">
+                                    </p-checkbox>
+                                    <label for="dia">Diabetes</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="field-checkbox mb-3">
+                                    <p-checkbox name="pmHistory" value="Tuberculosis" inputId="tub">
+                                    </p-checkbox>
+                                    <label for="tub">Tuberculosis</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="field-checkbox mb-3">
+                                    <p-checkbox name="pmHistory" value="Other" inputId="oth">
+                                    </p-checkbox>
+                                    <label for="oth">Other</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6">
+                                <div class="field-checkbox mb-2">
+                                    <p-checkbox name="pmHistory" value="Tobacco" inputId="tob"
+                                        (click)="onToggleTobacco()">
+                                    </p-checkbox>
+                                    <label for="tob">Tobacco</label>
+                                </div>
+                                <div *ngIf="tobaccoSticks">
+                                    <p class="lable">Sticks Per Day.</p>
+                                    <input type="text" pInputText />
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="field-checkbox mb-2">
+                                    <p-checkbox name="pmHistory" value="Alcohol" inputId="alc"
+                                        (click)="onToggleAlcohol()">
+                                    </p-checkbox>
+                                    <label for="alc">Alcohol</label>
+                                </div>
+                                <div *ngIf="alcoholCups">
+                                    <p class="lable">Cups Per Day.</p>
+                                    <input type="text" pInputText />
+                                </div>
+                            </div>
+                        </div>
+                        <p-divider align="left">
+                            <div class="inline-flex align-items-center">
+                                <h4 class="divider m-0"><i class="pi pi-check"></i> General Notes</h4>
+                            </div>
+                        </p-divider>
+                        <div class="row">
+                            <div class="col-12">
+                                <textarea pInputTextarea rows="4"
+                                    placeholder="Please provide any additional or relevant information"></textarea>
+                            </div>
+                        </div>
+                        <!-- |\/| -->
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-12 col-md-4">
+                                <button pButton pRipple type="button" label="Go to Next Section"
+                                    class="p-button-rounded w-100" icon="pi pi-arrow-right" iconPos="right"></button>
+                            </div>
+                        </div>
+                        <!-- |\/| -->
+                    </p-tabPanel>
+                    <p-tabPanel header="Family Medical History">
+                        <p-divider align="left">
+                            <div class="inline-flex align-items-center">
+                                <h4 class="divider m-0"><i class="pi pi-check"></i> General Notes</h4>
+                            </div>
+                        </p-divider>
+                        <div class="row">
+                            <div class="col-md-3 mb-2">
+                                <p class="lable">High Blood Pressure</p>
+                                <p-multiSelect [options]="familyMember" defaultLabel="Select " optionLabel="name"
+                                    selectedItemsLabel="{0} items selected"></p-multiSelect>
+                            </div>
+                            <div class="col-md-3 mb-2">
+                                <p class="lable">Stroke</p>
+                                <p-multiSelect [options]="familyMember" defaultLabel="Select " optionLabel="name"
+                                    selectedItemsLabel="{0} items selected"></p-multiSelect>
+
+                            </div>
+                            <div class="col-md-3 mb-2">
+                                <p class="lable">Asthma</p>
+                                <p-multiSelect [options]="familyMember" defaultLabel="Select " optionLabel="name"
+                                    selectedItemsLabel="{0} items selected"></p-multiSelect>
+
+                            </div>
+                            <div class="col-md-3 mb-2">
+                                <p class="lable">Cancer</p>
+                                <p-multiSelect [options]="familyMember" defaultLabel="Select " optionLabel="name"
+                                    selectedItemsLabel="{0} items selected"></p-multiSelect>
+
+                            </div>
+                            <!-- |\/| -->
+                            <div class="col-md-3 mb-2">
+                                <p class="lable">Heart Attack</p>
+                                <p-multiSelect [options]="familyMember" defaultLabel="Select " optionLabel="name"
+                                    selectedItemsLabel="{0} items selected"></p-multiSelect>
+
+                            </div>
+                            <div class="col-md-3 mb-2">
+                                <p class="lable">Diabetes</p>
+                                <p-multiSelect [options]="familyMember" defaultLabel="Select " optionLabel="name"
+                                    selectedItemsLabel="{0} items selected"></p-multiSelect>
+
+                            </div>
+                            <div class="col-md-3 mb-2">
+                                <p class="lable">Tuberculosis</p>
+                                <p-multiSelect [options]="familyMember" defaultLabel="Select " optionLabel="name"
+                                    selectedItemsLabel="{0} items selected"></p-multiSelect>
+
+                            </div>
+                            <div class="col-md-3 mb-2">
+                                <p class="lable">Other</p>
+                                <p-multiSelect [options]="familyMember" defaultLabel="Select " optionLabel="name"
+                                    selectedItemsLabel="{0} items selected"></p-multiSelect>
+
+                            </div>
+                        </div>
+                        <p-divider align="left">
+                            <div class="inline-flex align-items-center">
+                                <h4 class="divider m-0"><i class="pi pi-check"></i> General Notes</h4>
+                            </div>
+                        </p-divider>
+                        <div class="row">
+                            <div class="col-12">
+                                <textarea pInputTextarea rows="4"
+                                    placeholder="Please provide any additional or relevant information"></textarea>
+                            </div>
+                        </div>
+                        <!-- |\/| -->
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-12 col-md-4">
+                                <button pButton pRipple type="button" label="Register Patient"
+                                    class="p-button-rounded w-100" icon="pi pi-check" iconPos="right"></button>
+                            </div>
+                        </div>
+                        <!-- |\/| -->
+                    </p-tabPanel>
+                </p-tabView>
+            </div>
+        </div>
+    </div>
+</section>
